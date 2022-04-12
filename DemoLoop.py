@@ -1,5 +1,4 @@
 #DemoLoop.pyv
-from curses import BUTTON1_TRIPLE_CLICKED
 
 
 value = 5
@@ -42,3 +41,26 @@ for i in lst:
 
 result = list(range(10))
 print(result)
+
+# 리스트컴프리헨션
+lst = list(range(1,11))
+result = [i**2 for i in lst if i > 5]
+print(result)
+
+
+tp = ("apple","banana", "kiwi")
+print([len(i) for i in tp])
+
+lst = [10,25,30]
+iterL = filter(None,lst)
+for item in iterL:
+    print(item)
+
+print("---필터링하면---")
+
+def getBiggerThan20(i):
+    return i>20
+
+iterL = filter(getBiggerThan20, lst)
+for item in iterL:
+    print(item)
